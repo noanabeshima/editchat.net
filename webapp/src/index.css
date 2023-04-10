@@ -1,0 +1,55 @@
+:root {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
+  font-family: Iner, Roboto-mono, ui-sans-serif, system-ui, -apple-system,
+    Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Helvetica Neue,
+    Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  line-height: 1.5;
+  font-weight: 500;
+  -webkit-text-size-adjust: 100%;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: rgba(52, 53, 65);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  scrollbar-width: thin;
+}
+
+label {
+  text-decoration: inherit;
+  font-weight: 400;
+}
+
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  resize: none;
+  outline: none;
+  display: block;
+}
+
+::selection {
+  background: #6276bb;
+}
+
+a {
+  font-weight: 400;
+  color: #8589e0;
+  text-decoration: inherit;
+}
+
+body {
+  margin: 0;
+}

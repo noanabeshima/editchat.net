@@ -1,0 +1,39 @@
+.APIKeyContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex-filler {
+  flex: 1;
+  flex-grow: 1;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.APIKeyForm {
+  padding-top: min(10rem, 30%);
+}
+
+.APIKeyInput {
+  width: min(33rem, 95%);
+  font-size: 1.5rem;
+  padding: 1rem;
+  padding-left: min(2rem, 8%);
+  padding-right: min(2rem, 8%);
+  margin-bottom: 1rem;
+  border-radius: 0.6rem;
+  border: none;
+}
+
+.APIKeyInput:focus {
+  outline: none;
+}
+
+.APIKeyLabel {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding-left: min(1rem, 4%);
+  white-space: nowrap;
+}
