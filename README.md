@@ -15,4 +15,5 @@ Settings and tips can be found by clicking on the settings button in the top-rig
 
 In order to flexibly create new messages, toggle 'Use CMD+Enter instead of Enter to send'. Afterwards, Enter will create a new user message instead of triggering generation.
 
-<img width="546" alt="image" src="https://user-images.githubusercontent.com/31455280/231018014-f1587296-645d-4688-8f44-758958947b05.png">
+<img width="458" alt="image" src="https://user-images.githubusercontent.com/31455280/231019590-037b9c79-3b6d-4d4d-8efb-91979d12e4e7.png">
+
