@@ -1,6 +1,6 @@
 # Editable ChatGPT Interface
 
-# [editchat.vercel.app](https://editchat.vercel.app)
+[editchat.vercel.app](https://editchat.vercel.app)
 
 
 Allows you to edit Assistant messages and add System messages.
