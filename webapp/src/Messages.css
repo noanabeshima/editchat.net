@@ -1,0 +1,106 @@
+.messages-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  display: flex;
+  width: 100%;
+  padding-right: min(10rem, 25%);
+  box-sizing: border-box;
+  font-size: 1.65rem;
+  font-weight: 400;
+}
+
+.flexbox-column-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.message-role {
+  text-align: left;
+  padding-left: 0.8rem;
+
+  width: 7.3rem;
+  cursor: pointer;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+.message-content {
+  flex: 1;
+  margin: 0.6rem;
+  padding-left: 1rem;
+  padding-right: 3rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-weight: 400;
+}
+
+.message-editable {
+  flex: 1;
+  margin: 0.6rem;
+  padding-left: 1rem;
+  padding-right: 3rem;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  border: none;
+  resize: none;
+  min-height: 3.4rem;
+
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+.flex-filler {
+  flex: 1;
+  min-height: 8rem;
+  flex-grow: 1;
+  pointer-events: none;
+}
+
+.settings-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.stopGenerationButton {
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+  pointer-events: none;
+  padding-bottom: min(0.5rem, 3%);
+  padding-top: min(0.5rem, 3%);
+  padding-left: min(0.8rem, 3%);
+  padding-right: min(0.8rem, 3%);
+  border-radius: 0.3rem;
+  position: fixed;
+  bottom: 10px;
+
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.stopGenerationButton.visible {
+  opacity: 0.3;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.stopGenerationButton.visible:hover {
+  opacity: 0.8;
+  transition: opacity 0.1s ease-in-out;
+}
