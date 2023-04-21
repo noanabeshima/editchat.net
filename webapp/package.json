@@ -1,12 +1,12 @@
 {
-  "name": "clean-roam",
+  "name": "edit-chat",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "yarn vite",
+    "build": "yarn vite build",
+    "preview": "yarn vite preview"
   },
   "dependencies": {
     "process": "^0.11.10",
