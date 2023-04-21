@@ -1,6 +1,6 @@
 # Editable ChatGPT Interface
 
-[editchat.vercel.app](https://editchat.vercel.app)
+[editchat.net](https://editchat.net)
 
 
 
