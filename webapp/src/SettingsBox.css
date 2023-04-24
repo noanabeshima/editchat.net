@@ -7,7 +7,6 @@
   opacity: 0.3;
   padding: 0.5rem;
   transition: opacity 0.2s ease-in-out;
-  /* make it not draggable */
   -webkit-user-drag: none;
 }
 
@@ -24,7 +23,6 @@
   position: absolute;
   top: 6.2rem;
   right: -300px;
-  /* height: 23rem;; */
   width: 13rem;
   padding: 1.5rem;
   padding-bottom: 0;
