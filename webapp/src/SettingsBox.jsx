@@ -11,12 +11,21 @@ function SettingsBox({
   setModel,
   setEnterToSend,
   enterToSend,
+  maxTokens,
+  setMaxTokens,
+  temperature,
+  setTemperature
 }) {
   let modelOptions = ["gpt-3.5-turbo", "gpt-4"];
 
-  console.log("enterToSend: ", enterToSend);
+  useEffect(() => {
+    console.log(temperature)
+  }, [temperature])
+  
+
   return (
     <div className={`settingsBox ${visible ? "open" : ""}`} tabIndex={-1}>
+      <div className="settingsLabel">API Key</div>
       <textarea
         tabIndex={-1}
         className="settingsItem apiKeyBox user"
@@ -24,6 +33,7 @@ function SettingsBox({
         placeholder="Your API Key"
         onChange={(e) => setApiKey(e.target.value)}
       />
+      <div className="settingsLabel">Model</div>
       <select
         tabIndex={-1}
         className="settingsItem selectModel user"
@@ -36,6 +46,48 @@ function SettingsBox({
           </option>
         ))}
       </select>
+      <div className="settingsLabel">Max Tokens</div>
+      <div className="settingsItem enterToSend user noselect">
+        <div style={{flexbox: "row"}}>
+          <div>
+            <label>
+              <input
+                className="settingsItem maxTokensBox user"
+                style={{borderRadius: "5px", marginBottom: "0rem"}}
+                tabIndex={-1}
+                type="number"
+                max={8192}
+                value={maxTokens}
+                onChange={(e) => setMaxTokens(e.target.value)}
+              />
+            </label>
+          </div>
+        </div>
+      </div>
+
+
+      <div className="settingsLabel">Temperature</div>
+      <div className="settingsItem enterToSend user noselect">
+        <label style={{width: "100%", display: "flex"}}>
+          <input className=" user settingsItem temperatureBox" type="number" min={0} max={1} step={0.01} value={temperature} onChange={(e) => setTemperature(e.target.value)}
+          style={{}}></input>
+          <div style={{flex: 1}}>
+          <input
+            className="settingsItem slider user"
+            style={{marginBottom: "0rem", width: "100%"}}
+            tabIndex={-1}
+            type="range"
+            min={0}
+            max={1}
+            step={0.01}
+            value={temperature}
+            onChange={(e) => setTemperature(e.target.value)}
+          />
+          </div>
+        </label>
+      </div>
+
+      <div className="settingsLabel">CMD+Enter to generate</div>
       <div className="settingsItem enterToSend user noselect">
         <label>
           <input
@@ -45,9 +97,7 @@ function SettingsBox({
             onChange={(e) => setEnterToSend(!e.target.checked)}
           />
           <span className="checkmark"></span>
-          {/* <div> */}
-          <span /> Use CMD+Enter instead of Enter to send
-          {/* </div> */}
+          <span /> 
         </label>
       </div>
 
@@ -60,11 +110,6 @@ function SettingsBox({
             marginBottom: "0rem",
           }}
         >
-          <li>
-            You can generate from a message that isn't the last message by
-            clicking on earlier messages.
-          </li>
-          <li>Use CMD+Del to delete lines quickly</li>
           <li>Click on 'You' or 'Assistant' to swap the role.</li>
           <li style={{ marginBottom: 0 }}>
             You can also CMD+click on a role to create System messages.
@@ -83,6 +128,10 @@ function SettingsButton({
   setModel,
   enterToSend,
   setEnterToSend,
+  maxTokens,
+  setMaxTokens,
+  temperature,
+  setTemperature
 }) {
   const [settingsVisible, setSettingsVisible] = useState(false);
 
@@ -105,6 +154,10 @@ function SettingsButton({
           setModel={setModel}
           setEnterToSend={setEnterToSend}
           enterToSend={enterToSend}
+          maxTokens={maxTokens}
+          setMaxTokens={setMaxTokens}
+          temperature={temperature}
+          setTemperature={setTemperature}
         />
       }
     </>

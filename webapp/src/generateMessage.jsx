@@ -1,15 +1,17 @@
 const DEFAULT_PARAMS = {
   // "model": "gpt-4",
   temperature: 1.0,
-  max_tokens: 300,
   stream: true,
 };
 
-async function get_stream({ generationMessages, model, apiKey }) {
+async function get_stream({ generationMessages, model, apiKey, maxTokens, temperature }) {
+  console.log('temperature', temperature)
   const params_ = {
     ...DEFAULT_PARAMS,
     messages: generationMessages,
     model: model,
+    max_tokens: maxTokens,
+    temperature: temperature
   };
   const requestOptions = {
     method: "POST",
@@ -29,6 +31,8 @@ export default function generateMessage({
   setIsGenerating,
   model,
   apiKey,
+  maxTokens,
+  temperature
 }) {
   let cancelGenerationFlag = false;
   let generationMessages = [...messages];
@@ -50,7 +54,7 @@ export default function generateMessage({
   setMessages(newMessages);
 
   setIsGenerating(true);
-  let stream = get_stream({ generationMessages, model, apiKey });
+  let stream = get_stream({ generationMessages, model, apiKey, maxTokens, temperature });
   let readable_stream = stream.then((response) => {
     const reader = response.body.getReader();
     return new ReadableStream({

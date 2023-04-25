@@ -139,7 +139,7 @@ function EditableMessage({
   );
 }
 
-export default function Messages({ model, apiKey, enterToSend }) {
+export default function Messages({ model, apiKey, enterToSend, maxTokens, temperature }) {
   const [messages, setMessages] = useState([{ role: "user", content: "" }]);
   const [focusIndex, setFocusIndex] = useState(-1);
   const [cursorPos, setCursorPos] = useState(-1);
@@ -187,6 +187,8 @@ export default function Messages({ model, apiKey, enterToSend }) {
       setIsGenerating: setIsGenerating,
       model: model,
       apiKey: apiKey,
+      maxTokens: parseInt(maxTokens),
+      temperature: parseFloat(temperature)
     });
     setCancelGenerationWrapper({ fn: cancelGeneration });
     setScrollToBottom(true);
