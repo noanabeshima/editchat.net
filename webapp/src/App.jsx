@@ -6,7 +6,7 @@ import SettingsButton from "./SettingsBox";
 import APIKeyForm from "./APIKeyForm";
 
 function App() {
-  const [model, setModel] = useState("gpt-3.5-turbo");
+  const [model, setModel] = useState("gpt-4");
   const [apiKey, setApiKey] = useState("");
   const [maxTokens, setMaxTokens] = useState(500);
   const [enterToSend, setEnterToSend] = useState(false);
