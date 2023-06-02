@@ -77,11 +77,12 @@ function EditableMessage({
   // onHeightChange is a callback that is called when the height of the textarea changes
   // it is used to update the height of the message
   let onHeightChange = () => {
-    // if near bottom of screen, scroll down
+    // if near bottom of screen and generating, scroll down
     if (
-      window.innerHeight + window.scrollY >=
-      document.body.offsetHeight - 90
+      (window.innerHeight + window.scrollY >=
+      document.body.offsetHeight - 90) && isGenerating
     ) {
+      console.log('scrolling')
       setScrollToBottom(true);
     }
   };

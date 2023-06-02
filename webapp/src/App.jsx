@@ -6,10 +6,10 @@ import SettingsButton from "./SettingsBox";
 import APIKeyForm from "./APIKeyForm";
 
 function App() {
-  const [model, setModel] = useState("gpt-4");
+  const [model, setModel] = useState("gpt-3.5-turbo");
   const [apiKey, setApiKey] = useState("");
   const [maxTokens, setMaxTokens] = useState(500);
-  const [enterToSend, setEnterToSend] = useState(true);
+  const [enterToSend, setEnterToSend] = useState(false);
   const [temperature, setTemperature] = useState(1.0);
 
   const [firstTimeLoad, setFirstTimeLoad] = useState(true);
